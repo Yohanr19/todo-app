@@ -1,0 +1,54 @@
+.app{
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+}
+.light-bg{
+    background-image: url(../images/bg-mobile-light.jpg);
+    background-color: var(--LTlightGrayishBlue);
+}
+.dark-bg {
+    background-image: url(../images/bg-mobile-dark.jpg);
+    background-color: var(--DTveryDarkBlue);
+}
+header{
+    width: 85%;
+    margin: 0 auto;
+    padding: 3rem 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    text-transform: uppercase;
+    color: var(--LTveryLightGray);
+    letter-spacing: 0.55ch;
+    font-size: 2rem;
+}
+.theme-icon{
+    width: 2rem;
+    height: 2rem;
+}
+.create-todo{
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    background-color: var(--LTveryLightGray);
+    padding: 1rem 0.5rem;
+    border-radius: 7px;
+    display: flex;
+    place-items: center;
+}
+.todo-input{
+    margin-left: 1.1rem ;
+    border: none;
+}
+.check-create{
+    margin-left: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border:1px solid var(--LTveryGrayishBlue);
+}
