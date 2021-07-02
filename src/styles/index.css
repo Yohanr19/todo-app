@@ -2,7 +2,7 @@
 :root{
   --FontFamily: 'Josefin Sans' ;
   --PrimaryBrightBlue: hsl(220, 98%, 61%);
-  --PrimaryCheckBg: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
+  --PrimaryCheckBg: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   --LTveryLightGray: hsl(0, 0%, 98%);
   --LTveryGrayishBlue: hsl(236, 33%, 92%);
   --LTlightGrayishBlue: hsl(233, 11%, 84%);

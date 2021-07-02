@@ -1,6 +1,6 @@
 import React from 'react'
-import iconCheck from './images/icon-check.svg'
-import './styles/app.css'
+import iconCheck from '../images/icon-check.svg'
+import '../styles/app.css'
 
 const Create = () => {
     return (

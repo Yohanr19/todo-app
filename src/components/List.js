@@ -1,35 +1,18 @@
 import React from 'react'
-import iconCheck from './images/icon-check.svg'
-import iconClose from './images/icon-cross.svg'
-import './styles/app.css'
+import iconCheck from '../images/icon-check.svg'
+import iconClose from '../images/icon-cross.svg'
+import '../styles/app.css'
 
-const data = [
-     {
-     id: 1,
-     text: 'Do this, do that',
-     isActive: true} ,
-     {
-      id: 2,
-     text: 'Do that and grind, then do that',
-     isActive: true} ,
-     {
-      id: 3,
-     text: 'Grind. grind grind',
-     isActive: true} ,
-     {
-     id: 4,
-     text: 'You know, grind',
-    isActive: true} ,
-]
-const List = () => {
+const List = (props) => {
+    const {data} = props;
     return (
         <section className='todo-list card'>
             <>
            {data.map( (item)=>{
                return (
                 <div key={item.id} className='todo-item container'>
-                    <img src={iconCheck} className='check' alt='check'/>
-                    <p className="todo-text">{item.text}</p>
+                    <img src={iconCheck} className={'check'+" "+(item.isActive || "checked")} alt='check'/>
+                    <p className={"todo-text"+" "+(item.isActive || 'non-active')}>{item.text}</p>
                     <img src={iconClose} className='close' alt='close'/>
                 </div>)
            })}

@@ -7,14 +7,6 @@
     width: 85%;
     margin: 0 auto;
 }
-.light-bg{
-    background-image: url(../images/bg-mobile-light.jpg);
-    background-color: var(--LTlightGrayishBlue);
-}
-.dark-bg {
-    background-image: url(../images/bg-mobile-dark.jpg);
-    background-color: var(--DTveryDarkBlue);
-}
 header{
     padding-top: 3rem;
     padding-bottom: 1.4rem;
@@ -35,14 +27,6 @@ header{
     padding: 1rem 0;
     display: flex;
     place-items: center;
-}
-.todo-text{
-    padding-left: 0.5rem;
-    padding-right: 2rem;
-    font-size: 0.8rem;
-    color: var(--LTveryDarkGrayishBlue);
-    justify-self:left;
-    width: 100%;
 }
 .close {
     position: absolute;
@@ -72,12 +56,20 @@ header{
 }
 .todo-input{
     margin-left: 1.1rem ;
+    min-width: 55%;
     border: none;
     color: var(--LTveryDarkGrayishBlue);
 }
+.todo-text{
+    padding-left: 0.5rem;
+    padding-right: 2rem;
+    font-size: 0.8rem;
+    color: var(--LTveryDarkGrayishBlue);
+    justify-self:left;
+    width: 100%;
+}
 .check{
-    width: 1.4rem;
-    height: 1.4rem;
+    padding: 0.4rem;
     border-radius: 50%;
     border:1px solid var(--LTveryGrayishBlue);
     margin-left: 1rem;
@@ -103,10 +95,12 @@ header{
     background-color: var(--LTveryLightGray);
     border-radius: 7px;
 }
-.options-container h3{
+.filter{
+    
     padding: 0 0.3rem;
     color: var(--LTdarkGrayishBlue);
     font-size: 1rem;
+    z-index: 3;
 }
 .instruction{
     margin-top: 3rem;
@@ -114,7 +108,24 @@ header{
     text-align: center;
     font-size: 1rem;
 }
-
+.filter:hover,.check:hover,.close:hover,.theme-icon:hover,.clear-items:hover{
+    cursor: pointer;
+}
+.checked{
+    background:var(--PrimaryCheckBg);
+}
+.non-active{
+    color: var(--LTlightGrayishBlue);
+    text-decoration: line-through;
+}
+.light-bg{
+    background-image: url(../images/bg-mobile-light.jpg);
+    background-color: var(--LTlightGrayishBlue);
+}
+.dark-bg {
+    background-image: url(../images/bg-mobile-dark.jpg);
+    background-color: var(--DTveryDarkBlue);
+}
 @media screen and (min-width: 1000px) {
         .wrapper {
             width: 45%;
@@ -123,7 +134,6 @@ header{
             position: absolute;
             bottom: -3.4rem;
             width: 95%;
-            
         }
         .todo-list{
             padding-bottom: 0;
@@ -132,4 +142,8 @@ header{
         .options-container{
             margin-top: 0;
         }
+        .todo-text{
+            font-size: 1rem;
+        }
+       
 }

@@ -1,8 +1,8 @@
 
 import React from 'react'
-import moonIcon from "./images/icon-moon.svg"
-import sunIcon from "./images/icon-sun.svg"
-import './styles/app.css'
+import moonIcon from "../images/icon-moon.svg"
+import sunIcon from "../images/icon-sun.svg"
+import '../styles/app.css'
 
 function Header() {
     return (
