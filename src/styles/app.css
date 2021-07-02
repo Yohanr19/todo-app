@@ -58,6 +58,7 @@ header{
     margin-left: 1.1rem ;
     min-width: 55%;
     border: none;
+    background: transparent;
     color: var(--LTveryDarkGrayishBlue);
 }
 .todo-text{
@@ -126,6 +127,9 @@ header{
     background-image: url(../images/bg-mobile-dark.jpg);
     background-color: var(--DTveryDarkBlue);
 }
+.dark-card{
+    background-color: var(--DTveryDarkDesaturatedBlue);
+}
 @media screen and (min-width: 1000px) {
         .wrapper {
             width: 45%;
@@ -144,6 +148,12 @@ header{
         }
         .todo-text{
             font-size: 1rem;
+        }
+        .light-bg{
+            background-image: url(../images/bg-desktop-light.jpg);
+        }
+        .dark-bg {
+            background-image: url(../images/bg-desktop-dark.jpg);
         }
        
 }

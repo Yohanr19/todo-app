@@ -4,15 +4,15 @@ import iconClose from '../images/icon-cross.svg'
 import '../styles/app.css'
 
 const List = (props) => {
-    const {data} = props;
+    const {data, isDark} = props;
     return (
-        <section className='todo-list card'>
+        <section className={'todo-list card'+" "+(isDark && 'dark-card')}>
             <>
            {data.map( (item)=>{
                return (
                 <div key={item.id} className='todo-item container'>
                     <img src={iconCheck} className={'check'+" "+(item.isActive || "checked")} alt='check'/>
-                    <p className={"todo-text"+" "+(item.isActive || 'non-active')}>{item.text}</p>
+                    <p style={{color:(isDark && 'var(--DTlightGrayishBlue)')}} className={"todo-text"+" "+(item.isActive || 'non-active')}>{item.text}</p>
                     <img src={iconClose} className='close' alt='close'/>
                 </div>)
            })}

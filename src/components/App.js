@@ -1,4 +1,4 @@
-
+import {useState} from 'react'
 import '../styles/app.css'
 import Header from "./Header";
 import Create from './Create';
@@ -21,16 +21,17 @@ const data = [
   {
   id: 4,
   text: 'You know, grind',
- isActive: false} ,
+  isActive: false} ,
 ]
 function App() {
+  const [isDark, setIsDark] = useState(true);
   return (
-    <div className="app light-bg">
+    <div className={"app"+" "+(isDark?"dark-bg":"light-bg")}>
       <div className="wrapper">
-      <Header />
-      <Create />
-      <List data={data}/>
-      <Options />
+      <Header isDark={isDark} themeSwitcher={setIsDark}/>
+      <Create isDark={isDark}/>
+      <List data={data} isDark={isDark}/>
+      <Options isDark={isDark}/>
       <p className='instruction'>Click Sun and Moon Icon to Change Theme</p>
     </div>
       </div>
