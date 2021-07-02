@@ -1,18 +1,20 @@
 import React from 'react'
-import iconCheck from '../images/icon-check.svg'
 import iconClose from '../images/icon-cross.svg'
 import '../styles/app.css'
 
 const List = (props) => {
-    const {data, isDark} = props;
+    const {isActiveHandler, data, isDark} = props;
+
     return (
-        <section className={'todo-list card'+" "+(isDark && 'dark-card')}>
+        <section className={'todo-list card '+(isDark && 'dark-card')}>
             <>
            {data.map( (item)=>{
                return (
                 <div key={item.id} className='todo-item container'>
-                    <img src={iconCheck} className={'check'+" "+(item.isActive || "checked")} alt='check'/>
-                    <p style={{color:(isDark && 'var(--DTlightGrayishBlue)')}} className={"todo-text"+" "+(item.isActive || 'non-active')}>{item.text}</p>
+                    <div onClick={()=> isActiveHandler(item.id)} className={'check '+(item.isActive || "checked")}>   
+                       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke={item.isActive?"none":"#FFF"} strokeWidth="2" d="M1 4.304L3.696 7l6-6"/></svg>
+                    </div>
+                    <p style={{color:(isDark && 'var(--DTlightGrayishBlue)')}} className={"todo-text "+(item.isActive || 'non-active')}>{item.text}</p>
                     <img src={iconClose} className='close' alt='close'/>
                 </div>)
            })}

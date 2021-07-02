@@ -5,7 +5,7 @@ import Create from './Create';
 import List from './List';
 import Options from './Options';
 
-const data = [
+const importedData = [
   {
   id: 1,
   text: 'Do this, do that',
@@ -25,12 +25,23 @@ const data = [
 ]
 function App() {
   const [isDark, setIsDark] = useState(true);
+  const [data, setData] = useState(importedData);
+  const isActiveHandler = (id)=> {
+    let changedData = data.map((elem)=> {
+      if (elem.id === id) {
+        elem.isActive = !elem.isActive
+        return (elem)
+      }
+      return elem
+    } )
+    setData(changedData)
+ }
   return (
-    <div className={"app"+" "+(isDark?"dark-bg":"light-bg")}>
+    <div className={"app "+(isDark?"dark-bg":"light-bg")}>
       <div className="wrapper">
       <Header isDark={isDark} themeSwitcher={setIsDark}/>
       <Create isDark={isDark}/>
-      <List data={data} isDark={isDark}/>
+      <List data={data} isDark={isDark} isActiveHandler={isActiveHandler} />
       <Options isDark={isDark}/>
       <p className='instruction'>Click Sun and Moon Icon to Change Theme</p>
     </div>
