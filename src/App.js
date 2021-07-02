@@ -1,17 +1,16 @@
 
 import './styles/app.css'
 import Header from "./Header";
-import iconCheck from './images/icon-check.svg'
+import Create from './Create';
+import List from './List';
+
 
 function App() {
   return (
     <div className="app light-bg">
       <Header />
-      <form className='create-todo'>
-          <img src={iconCheck} className='check-create' alt='check'/>
-          <label for='new-todo'></label>
-          <input type='text'  id='new-todo' className='todo-input' required placeholder='Create a new todo...'></input>
-      </form>
+      <Create />
+      <List />
     </div>
   );
 }
