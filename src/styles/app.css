@@ -3,6 +3,10 @@
         background-repeat: no-repeat;
         min-height: 100vh;
 }
+.wrapper{
+    width: 85%;
+    margin: 0 auto;
+}
 .light-bg{
     background-image: url(../images/bg-mobile-light.jpg);
     background-color: var(--LTlightGrayishBlue);
@@ -12,8 +16,6 @@
     background-color: var(--DTveryDarkBlue);
 }
 header{
-    width: 85%;
-    margin: 0 auto;
     padding-top: 3rem;
     padding-bottom: 1.4rem;
     display: flex;
@@ -50,8 +52,7 @@ header{
 }
 .card{
     position: relative;
-    width: 85%;
-    margin: 1.15rem auto;
+    margin: 1.15rem 0;
     margin-bottom: 0.5rem;
     background-color: var(--LTveryLightGray);
     border-radius: 7px;
@@ -98,8 +99,7 @@ header{
     padding: 1.2rem 0;
     display: flex;
     justify-content: center;
-    width: 85%;
-    margin: 1.15rem auto;
+    margin: 1.15rem 0;
     background-color: var(--LTveryLightGray);
     border-radius: 7px;
 }
@@ -113,4 +113,23 @@ header{
     color: var(--LTdarkGrayishBlue);
     text-align: center;
     font-size: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+        .wrapper {
+            width: 45%;
+        }
+        .list-end{
+            position: absolute;
+            bottom: -3.4rem;
+            width: 95%;
+            
+        }
+        .todo-list{
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .options-container{
+            margin-top: 0;
+        }
 }
