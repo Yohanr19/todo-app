@@ -15,10 +15,9 @@ header{
     width: 85%;
     margin: 0 auto;
     padding-top: 3rem;
-    padding-bottom: 2.1rem;
+    padding-bottom: 1.4rem;
     display: flex;
     justify-content: space-between;
-  
 }
 .title{
     text-transform: uppercase;
@@ -94,4 +93,24 @@ header{
 }
 .clear-items{
     float: right;
+}
+.options-container{
+    padding: 1.2rem 0;
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    margin: 1.15rem auto;
+    background-color: var(--LTveryLightGray);
+    border-radius: 7px;
+}
+.options-container h3{
+    padding: 0 0.3rem;
+    color: var(--LTdarkGrayishBlue);
+    font-size: 1rem;
+}
+.instruction{
+    margin-top: 3rem;
+    color: var(--LTdarkGrayishBlue);
+    text-align: center;
+    font-size: 1rem;
 }

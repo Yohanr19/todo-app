@@ -13,11 +13,11 @@ const data = [
      text: 'Do that and grind, then do that',
      isActive: true} ,
      {
-      id: 1,
+      id: 3,
      text: 'Grind. grind grind',
      isActive: true} ,
      {
-     id: 1,
+     id: 4,
      text: 'You know, grind',
     isActive: true} ,
 ]
@@ -27,7 +27,7 @@ const List = () => {
             <>
            {data.map( (item)=>{
                return (
-                <div className='todo-item container'>
+                <div key={item.id} className='todo-item container'>
                     <img src={iconCheck} className='check' alt='check'/>
                     <p className="todo-text">{item.text}</p>
                     <img src={iconClose} className='close' alt='close'/>
