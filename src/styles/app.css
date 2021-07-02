@@ -75,6 +75,7 @@ header{
     border:1px solid var(--LTveryGrayishBlue);
     margin-left: 1rem;
     justify-self: start;
+    background-color: transparent;
 }
 
 .list-end{
@@ -99,7 +100,6 @@ header{
 }
 .filter{
     padding: 0 0.3rem;
-    color: var(--LTdarkGrayishBlue);
     font-size: 1rem;
     z-index: 3;
 }
