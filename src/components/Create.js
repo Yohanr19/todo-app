@@ -3,7 +3,7 @@ import '../styles/app.css'
 
 const Create = (props) => {
     const {isDark , createItem} = props
-    const [value, setValue] = useState()
+    const [value, setValue] = useState("")
     const changeHandler = (e)=>{
         setValue(e.target.value);
     }
